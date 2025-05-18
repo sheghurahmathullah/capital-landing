@@ -6,7 +6,7 @@ import Add from "./_components/Add";
 import About from "./_components/About";
 import Sixth from "./_components/Sixth";
 import FAQ from "./_components/FAQ";
-import Testimonials from "./_components/Testimonials";
+// import Testimonials from "./_components/Testimonials";
 import Building from "@/components/Canvas/Building";
 import Sectors from "./_components/Sectors";
 import FounderInsights from "./_components/CeoVideo"
@@ -125,7 +125,7 @@ const Page = () => {
         <Carousel />
         <HorizontalScroll />
        
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FounderInsights/>
         <FAQ />
       </div>

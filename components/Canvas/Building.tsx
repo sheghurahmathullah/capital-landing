@@ -17,12 +17,11 @@ import {
   ScrollControls,
   useScroll as useDreiScroll,
   Clouds,
-  useGLTF,
 } from "@react-three/drei";
 import * as THREE from "three";
 import Model from "./Model";
-import { cn } from "../../lib/utils";
-import { useScroll } from "../../app/lib/use-scroll";
+import { cn } from "@/lib/utils";
+import { useScroll } from "@/app/lib/use-scroll";
 
 const CameraController = ({
   onAnimationComplete,
@@ -212,7 +211,7 @@ const ScrollContent = () => {
             style={{ textShadow: "0px 0px 2px #000000" }}
           >
             7K+
-            <p className="text-3xl text-white lg:text-5xl font-light md:-mt-3 lg:-mt-10">
+            <p className="text-3xl lg:text-5xl font-light md:-mt-3 lg:-mt-10">
               Visits
             </p>
           </div>
@@ -223,18 +222,18 @@ const ScrollContent = () => {
             style={{ textShadow: "0px 0px 2px #000000" }}
           >
             17+
-            <p className="text-3xl text-white lg:text-5xl font-light md:-mt-3 lg:-mt-10">
+            <p className="text-3xl lg:text-5xl font-light md:-mt-3 lg:-mt-10">
               Years
             </p>
           </div>
         </Section>
         <Section>
           <div
-            className="font-bold text-white text-[3rem] md:text-[5rem] lg:text-[8rem] text-white"
+            className="font-bold text-[3rem] md:text-[5rem] lg:text-[8rem] text-white"
             style={{ textShadow: "0px 0px 2px #000000" }}
           >
             7.2K+
-            <p className="text-3xl text-white lg:text-5xl font-light md:-mt-3 lg:-mt-10">
+            <p className="text-3xl lg:text-5xl font-light md:-mt-3 lg:-mt-10">
               Projects
             </p>
           </div>
@@ -245,7 +244,7 @@ const ScrollContent = () => {
             style={{ textShadow: "0px 0px 2px #000000" }}
           >
             8.5K+
-            <p className="text-3xl text-white lg:text-5xl font-light md:-mt-3 lg:-mt-10">
+            <p className="text-3xl lg:text-5xl font-light md:-mt-3 lg:-mt-10">
               Likes
             </p>
           </div>
@@ -289,9 +288,6 @@ const CloudsGroup = memo(() => {
 });
 
 CloudsGroup.displayName = "CloudsGroup";
-
-
-
 
 const Building = ({ containerRef, canvasRef }: BuildingProps) => {
   const { state, setState } = useScroll();
@@ -359,20 +355,20 @@ const Building = ({ containerRef, canvasRef }: BuildingProps) => {
 
             <ScrollContent />
 
-            <Environment preset="city" background />
+            <Environment preset="park" background />
             <ambientLight intensity={2} color="#ffffff" />
 
             <directionalLight
               position={[-100, 100, 100]}
               intensity={3}
               color="#ffffff"
-              castShadow={true}
+              castShadow={false}
             />
             <directionalLight
               position={[100, 100, 100]}
               intensity={3}
               color="#ffffff"
-              castShadow={true}
+              castShadow={false}
             />
 
             <hemisphereLight
@@ -380,6 +376,7 @@ const Building = ({ containerRef, canvasRef }: BuildingProps) => {
               groundColor="#ffffff"
               intensity={1.5}
             />
+
             <CloudsGroup />
             <Suspense fallback={null}>
               <Model />
