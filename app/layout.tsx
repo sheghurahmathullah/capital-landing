@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import LenisProvider from "@/lib/providers/lenis-provider";
 
 const camberTrialLight = localFont({
-  src: "./fonts/CamberTrial-Lt.otf",
+  src: "./fonts/CamberTRIAL-Lt.otf",
   variable: "--font-camber",
   display: "swap",
   weight: "300",
